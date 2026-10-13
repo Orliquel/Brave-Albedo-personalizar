@@ -1,0 +1,389 @@
+{
+  "packageVersion": "3.2",
+  "manifestVersion": "0.4.1",
+  "assetValidation": {
+    "passed": true,
+    "display": {
+      "width": 2560,
+      "height": 1440
+    },
+    "widths": [
+      1280,
+      2560
+    ],
+    "counts": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selectionsChecked": 30,
+    "facePlacementSamples": 110.0,
+    "stableBoundsForEverySelection": true,
+    "rightInsetPixels": 65.5,
+    "edgeMaxAlpha": 0,
+    "featherPixels": 1041,
+    "geometry": [
+      {
+        "width": 1280,
+        "count": 1,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 251
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "count": 2,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 251
+          },
+          {
+            "x": 249,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 497
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "count": 3,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 251
+          },
+          {
+            "x": 249,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 497
+          },
+          {
+            "x": 495,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 743
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "count": 4,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 251
+          },
+          {
+            "x": 249,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 497
+          },
+          {
+            "x": 495,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 743
+          },
+          {
+            "x": 741,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 989
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "count": 5,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 206,
+            "height": 40,
+            "right": 209
+          },
+          {
+            "x": 207,
+            "y": 0,
+            "width": 205,
+            "height": 40,
+            "right": 412
+          },
+          {
+            "x": 410,
+            "y": 0,
+            "width": 205,
+            "height": 40,
+            "right": 615
+          },
+          {
+            "x": 613,
+            "y": 0,
+            "width": 205,
+            "height": 40,
+            "right": 818
+          },
+          {
+            "x": 816,
+            "y": 0,
+            "width": 205,
+            "height": 40,
+            "right": 1021
+          }
+        ]
+      },
+      {
+        "width": 2560,
+        "count": 1,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 2560,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 251
+          }
+        ]
+      },
+      {
+        "width": 2560,
+        "count": 2,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 2560,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 251
+          },
+          {
+            "x": 249,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 497
+          }
+        ]
+      },
+      {
+        "width": 2560,
+        "count": 3,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 2560,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 251
+          },
+          {
+            "x": 249,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 497
+          },
+          {
+            "x": 495,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 743
+          }
+        ]
+      },
+      {
+        "width": 2560,
+        "count": 4,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 2560,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 251
+          },
+          {
+            "x": 249,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 497
+          },
+          {
+            "x": 495,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 743
+          },
+          {
+            "x": 741,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 989
+          }
+        ]
+      },
+      {
+        "width": 2560,
+        "count": 5,
+        "window": {
+          "left": 0,
+          "top": 0,
+          "width": 2560,
+          "height": 900,
+          "windowState": "normal"
+        },
+        "tabs": [
+          {
+            "x": 3,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 251
+          },
+          {
+            "x": 249,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 497
+          },
+          {
+            "x": 495,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 743
+          },
+          {
+            "x": 741,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 989
+          },
+          {
+            "x": 987,
+            "y": 0,
+            "width": 248,
+            "height": 40,
+            "right": 1235
+          }
+        ]
+      }
+    ]
+  },
+  "controllerSimulation": {
+    "passed": true,
+    "scenarios": 14
+  },
+  "nativeApiValidation": {
+    "width": 2576,
+    "tabCount": 5,
+    "installedThemes": 11,
+    "activeThemeId": "fbigjmgdepcbgjogobfkjnkeajleocfc",
+    "windowState": "maximized",
+    "controllerEnabled": true,
+    "calibratedWidth": 2560
+  },
+  "userVisualValidation": {
+    "confirmed": true,
+    "date": "2026-10-12",
+    "statement": "funcionando corretamente. Tudo OK"
+  },
+  "screenshotComparisonByAgent": false
+}

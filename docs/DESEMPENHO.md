@@ -1,42 +1,38 @@
-# Medição de RAM e CPU
+# Medição comparativa de desempenho — Albedo Adaptativo 3.1 e 3.2
 
-Medição realizada em **13 de outubro de 2026**, no Windows, usando Brave baseado em Chromium **155.0.8059.40** e uma máquina com **12 processadores lógicos**.
-
-Foram usados perfis isolados, com os mesmos argumentos de inicialização, de uma a cinco abas `about:blank`, larguras de 1280 e 2560 px e instrumentação por Playwright/CDP. O perfil com o pacote teve o controlador e os onze temas carregados sequencialmente. A API confirmou cinco abas, a variante de 2560 px ativa e todas as variantes instaladas.
+Medições feitas em 13 de outubro de 2026 no Windows com Brave 155.0.8059.40 e 12 processadores lógicos. Foram criados perfis isolados e equivalentes para cada versão. A versão testada teve o controlador e os onze temas carregados sequencialmente; a API confirmou os onze temas e o controlador ativo.
 
 ## Resultados
 
-| Cenário | Sem pacote | Com pacote | Diferença aproximada |
-|---|---:|---:|---:|
-| RAM privada média em repouso | 158,90 MiB | 216,04 MiB | +57,14 MiB |
-| RAM privada média durante trocas | 166,83 MiB | 551,22 MiB | +384,39 MiB |
-| Pico de RAM privada durante trocas | 190,72 MiB | 832,81 MiB | +642,09 MiB entre os picos |
-| CPU média em repouso | 0,0178% | 0,0268% | +0,009 ponto percentual |
-| CPU média durante trocas | 0,7802% | 3,6502% | +2,8700 pontos percentuais |
-| Pico de CPU em intervalo de cerca de um segundo | 1,77% | 5,02% | — |
+MiB representa RAM privada residente do Brave inteiro. CPU é porcentagem da capacidade total dos 12 processadores lógicos.
+
+| Cenário | Brave limpo A | 3.1 | Brave limpo B | 3.2 |
+|---|---:|---:|---:|---:|
+| RAM média em repouso | 150,36 MiB | 206,22 MiB | 148,33 MiB | 197,59 MiB |
+| CPU média em repouso | 0,0184% | 0,0275% | 0,0369% | 0,0092% |
+| RAM média durante trocas | 170,81 MiB | 558,17 MiB | 147,99 MiB | 545,36 MiB |
+| Pico de RAM durante trocas | 212,52 MiB | 830,77 MiB | 174,19 MiB | 838,73 MiB |
+| CPU média durante trocas | 1,010% | 3,762% | 1,011% | 3,672% |
+| Pico de CPU em cerca de 1 s | 2,32% | 5,03% | 2,20% | 4,90% |
+
+Comparação direta entre as versões: a 3.2 usou 4,2% menos RAM média e 66,6% menos CPU em repouso. Durante as trocas, a RAM média caiu 2,3% e a CPU média 2,4%; o pico de RAM subiu 1,0%. Portanto, o ganho aparece principalmente em repouso; no cenário ativo, a diferença é pequena e não reduz o pico de memória.
+
+Cada condição foi medida uma vez. Os dois perfis limpos também variaram, então as diferenças pequenas no teste ativo não demonstram uma melhora consistente por si só.
 
 ## Procedimento
 
-1. Aquecimento de 35 segundos com cinco abas vazias.
-2. Coleta de aproximadamente 15 segundos em repouso.
-3. Vinte alterações de quantidade de abas, seleção de aba e largura de janela durante uma coleta de aproximadamente 25 segundos.
-4. Verificação adicional do pacote após outra sequência de vinte alterações, seguida de 60 segundos sem interações.
+- 35 segundos de aquecimento com cinco abas `about:blank`.
+- 15 segundos de coleta em repouso.
+- 20 mudanças de quantidade de abas entre uma e cinco e de largura entre 1280 e 2560 px, em intervalos de um segundo, durante aproximadamente 25 segundos.
+- Cinco abas vazias, sem outras extensões ou páginas reais.
 
-A RAM foi medida somando `PROCESS_MEMORY_COUNTERS_EX2.PrivateWorkingSetSize` dos processos do perfil isolado. O contador representa RAM privada residente; não duplica páginas compartilhadas entre processos. A CPU foi calculada pela diferença de tempo de processamento desses processos, dividida pelo intervalo e pelos doze processadores lógicos.
-
-## Depois que as trocas param
-
-A verificação adicional chegou a **808,93 MiB** de pico. Nos últimos quinze segundos da pausa de um minuto, permaneceu em **750,31 MiB** de RAM privada média e **0,0249%** de CPU média.
-
-Na última amostra, aproximadamente **612 MiB** estavam no processo principal do Brave, enquanto o processo de renderização da extensão estava em aproximadamente **15 MiB**. Houve retenção de memória no navegador durante a aplicação repetida de temas; esta medição não estabelece se o comportamento é um vazamento permanente ou uma política de cache.
+A RAM foi lida por `PROCESS_MEMORY_COUNTERS_EX2.PrivateWorkingSetSize`. Os PIDs foram obtidos do Brave via CDP e atualizados a cada 500 ms, evitando somar processos alheios quando o Windows reutiliza IDs. A CPU foi calculada pela diferença de tempo de processamento dos mesmos PIDs, dividida pelo intervalo e pelos 12 processadores lógicos.
 
 ## Limitações
 
-- Uma passagem comparativa por configuração e uma verificação adicional de recuperação; pequenas diferenças entre processos afetam a estimativa.
-- As amostras têm intervalos de aproximadamente um segundo e não capturam todos os picos menores que isso.
-- Abas vazias: páginas reais e outras extensões não foram incluídas.
-- Memória compartilhada e memória de vídeo dedicada não fazem parte do número de RAM privada.
-- A instrumentação pode alterar o estado de execução do service worker.
-- O resultado visual foi aprovado pelo usuário; não foi feita uma comparação de capturas para afirmar identidade com a referência.
-
-A versão 3.1 deve ser tratada como experimental quanto ao custo da troca automática.
+- Uma passagem por condição; são estimativas, não uma avaliação estatística.
+- A sequência rápida de trocas mede um cenário deliberadamente movimentado; o uso cotidiano tende a gerar menos mudanças.
+- O número inclui processos do navegador inteiro, não apenas o controlador.
+- Não inclui memória de vídeo dedicada, outras extensões ou páginas reais.
+- A coleta por CDP/Playwright pode alterar levemente o tempo de execução.
+- O teste interativo permite verificar aparência no Brave, mas a comparação visual final fica a cargo do usuário.

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Albedo Adaptativo · Controlador",
+  "version": "0.4.2",
+  "description": "Seleciona um tema nativo pela quantidade de abas e pela largura calibrada da janela.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8tSy7g2aH7k5FOpuBWJhrVWjDW5HFC7/2JjdOAA5PTLW0h5fpfK2ASnt1AHrO18yLEfTigvKlvis0ztTIZxeAFlBvsTPMJeVSIorn0ltkQ551ZJM+oqftludu2Q0K5KuKFc1ZF15+Ey8BXCwHl/QdeWXIS60hLbHAfiVAic3Z6iKxU4wbk0uW5Qr0b+Cfv/IQRy47Mpao76QQiRDf/PzdKTOjPnPS9bxMgFBBxO8hHKU51NEzpTewpnMt4GdkGJKLjaLrx1Yy7KWLVAQMk3QSONqCkTJw7p2dDYBqXFMVjsRIGWt1pN3qmaGWaxm1nsWA92liVMB/klDpXDyBWrHrwIDAQAB",
+  "permissions": [
+    "management",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Albedo Adaptativo",
+    "default_popup": "popup.html"
+  }
+}

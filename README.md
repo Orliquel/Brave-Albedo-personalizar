@@ -4,9 +4,9 @@
 
 **Preto, vermelho escuro e Albedo na barra superior do Brave.**
 
-Versão pública **3.1** · Temas nativos do Chromium · **1 a 5 abas**
+Versão pública **3.2** · Temas nativos do Chromium · **1 a 5 abas**
 
-![Referência visual da barra superior](albedo-adaptativo-10-v3.1/recursos/referencia.png)
+![Referência visual da barra superior](albedo-adaptativo-10-v3.2/recursos/referencia.png)
 
 *Referência visual usada na criação do projeto.*
 
@@ -28,11 +28,11 @@ As abas e a barra de endereço continuam sendo elementos nativos do Brave. O pac
 
 ## Baixar e instalar
 
-**[Baixar o pacote 3.1](https://github.com/Orliquel/Brave-Albedo-personalizar/releases/download/v3.1/Brave-Albedo-personalizar-v3.1.zip)** · [Ver as releases](https://github.com/Orliquel/Brave-Albedo-personalizar/releases)
+**[Baixar o pacote 3.2](https://github.com/Orliquel/Brave-Albedo-personalizar/raw/refs/heads/main/Brave-Albedo-personalizar-v3.2.zip)** · [Ver as releases](https://github.com/Orliquel/Brave-Albedo-personalizar/releases)
 
 1. Extraia o ZIP para uma pasta permanente. Não mova essa pasta depois da instalação.
 2. Abra `brave://extensions` e ative **Modo do desenvolvedor**.
-3. Clique em **Carregar sem compactação** e selecione `albedo-adaptativo-10-v3.1/controlador`.
+3. Clique em **Carregar sem compactação** e selecione `albedo-adaptativo-10-v3.2/controlador`.
 4. Aguarde alguns segundos. Carregue **uma pasta por vez**, dando tempo ao controlador para reconhecer cada tema:
 
    | Calibração | Pastas para carregar individualmente |
@@ -43,9 +43,17 @@ As abas e a barra de endereço continuam sendo elementos nativos do Brave. O pac
 
 5. Abra o **Albedo Adaptativo** no menu de extensões. Confirme que os onze temas estão instalados e que a troca automática está ligada.
 
-Os caminhos da tabela estão dentro de `albedo-adaptativo-10-v3.1`. Selecione as pastas que contêm um `manifest.json`; a pasta principal e `recursos` não são extensões.
+Os caminhos da tabela estão dentro de `albedo-adaptativo-10-v3.2`. Selecione as pastas que contêm um `manifest.json`; a pasta principal e `recursos` não são extensões.
 
 **Instale o controlador antes dos temas.** Ele mantém as variantes desativadas até precisar delas. Carregar todos os temas simultaneamente pode fazer o navegador descartar variantes anteriores.
+
+### Atualizar da versão 3.1
+
+Extraia o pacote 3.2 em uma pasta permanente. Em `brave://extensions`, remova **somente o controlador antigo** e carregue a pasta `albedo-adaptativo-10-v3.2/controlador`. Mantenha os onze temas da versão 3.1 instalados: os IDs e as imagens das variantes não mudaram, então o controlador novo os reconhece sem reinstalação.
+
+## Ajustes de desempenho da versão 3.2
+
+O controlador agora espera 650 ms para agrupar eventos próximos, ignora a seleção de outra aba quando a quantidade não mudou e não regrava um status idêntico. Isso reduz verificações e atualizações redundantes. A troca do tema continua sendo feita pelo próprio Brave. A comparação com o mesmo coletor mostra o efeito medido destes ajustes; o relatório detalha os resultados e as limitações.
 
 ## Como a adaptação funciona
 
@@ -62,30 +70,33 @@ A calibração foi feita em um monitor de 2560 × 1440 px. Meia tela e quarto de
 
 O tema é compartilhado entre janelas: o controlador acompanha a janela normal em foco. Outra escala de tela, monitor ou largura pode exigir novas medidas. Esta versão oferece cinco tamanhos por calibração.
 
-## Desempenho: leia antes de ligar a troca automática
+## Desempenho medido
 
-**Esta versão tem retenção de memória durante trocas frequentes de tema.** O funcionamento visual foi confirmado pelo usuário; o consumo em execução ainda precisa de otimização.
+A versão 3.2 reduz o custo em repouso. Durante mudanças rápidas de abas e largura, o ganho é pequeno e o pico de RAM não diminuiu de forma relevante.
 
-| Medição em abas vazias | Brave sem o pacote | Brave com o pacote |
-|---|---:|---:|
-| RAM privada média em repouso | 159 MiB | 216 MiB |
-| RAM privada média durante trocas | 167 MiB | 551 MiB |
-| Pico de RAM privada | 191 MiB | 833 MiB |
-| CPU média durante trocas | 0,78% | 3,65% |
+| Métrica do Brave inteiro | Versão 3.1 | Versão 3.2 | Mudança |
+|---|---:|---:|---:|
+| RAM privada média em repouso | 206 MiB | 198 MiB | −4,2% |
+| CPU média em repouso | 0,028% | 0,009% | −66,6% |
+| RAM privada média durante trocas | 558 MiB | 545 MiB | −2,3% |
+| Pico de RAM durante trocas | 831 MiB | 839 MiB | +1,0% |
+| CPU média durante trocas | 3,762% | 3,672% | −2,4% |
 
-O cenário fez vinte alterações de quantidade de abas e largura em aproximadamente 25 segundos. Em uma verificação adicional, a RAM ficou em cerca de **750 MiB após um minuto sem novas trocas**. Esses valores são do Brave de teste inteiro; variam conforme a máquina e não representam somente o processo da extensão.
+O teste de atividade fez vinte mudanças de quantidade de abas e largura em 25 segundos. O Brave pode reter RAM depois das trocas; veja o [relatório de método e resultados](docs/DESEMPENHO.md).
 
-[Método, contexto e limitações da medição](docs/DESEMPENHO.md).
+## Teste interativo
 
+Execute `albedo-adaptativo-10-v3.2/TESTAR-3.2.cmd` para abrir uma janela de teste isolada com o controlador, os onze temas e cinco abas iniciais. Redimensione a janela e adicione ou feche abas para conferir a troca. Feche essa janela para encerrar o teste. O lançador depende do Node.js e Playwright já disponíveis neste ambiente Codex; não altera o perfil normal do Brave.
 ## Arquivos do projeto
 
 ```text
-albedo-adaptativo-10-v3.1/
+albedo-adaptativo-10-v3.2/
 ├── controlador/       Seleção automática dos temas
 ├── temas/             Dez variantes e o tema base
 ├── recursos/          Arte e referência para geração
 ├── calibracao.json    Limites medidos das abas
 ├── GERAR-IMAGENS.ps1  Regenera as imagens dos temas
+├── TESTAR-3.2.cmd    Abre o teste visual isolado
 └── VALIDACAO.json     Registro da validação da versão
 Albedo Wallpaper Brave.png
 docs/DESEMPENHO.md
@@ -106,3 +117,4 @@ O arquivo acima é separado do tema e só será usado como wallpaper se você o 
 **Melissa** — agente de IA do Orliquêl; implementação, documentação e publicação assistidas por IA.
 
 Projeto de fã inspirado em **Albedo, de Overlord**. Sem vínculo oficial com Brave ou com os titulares de Overlord.
+

@@ -1,0 +1,132 @@
+{
+  "manifest_version": 3,
+  "name": "Albedo Adaptativo · 2560 px · 3 abas",
+  "version": "0.4.1",
+  "description": "Tema nativo para janela Brave de 2560 px. Sem personalização da Nova Guia.",
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme-frame.png",
+      "theme_toolbar": "images/theme-toolbar.png"
+    },
+    "colors": {
+      "frame": [
+        10,
+        9,
+        12
+      ],
+      "frame_inactive": [
+        13,
+        10,
+        14
+      ],
+      "frame_incognito": [
+        10,
+        9,
+        12
+      ],
+      "frame_incognito_inactive": [
+        13,
+        10,
+        14
+      ],
+      "background_tab": [
+        16,
+        10,
+        14
+      ],
+      "background_tab_inactive": [
+        17,
+        13,
+        17
+      ],
+      "toolbar": [
+        11,
+        8,
+        12
+      ],
+      "toolbar_text": [
+        237,
+        231,
+        235
+      ],
+      "toolbar_button_icon": [
+        220,
+        211,
+        218
+      ],
+      "tab_text": [
+        248,
+        241,
+        245
+      ],
+      "tab_background_text": [
+        212,
+        202,
+        209
+      ],
+      "tab_background_text_inactive": [
+        190,
+        180,
+        188
+      ],
+      "tab_background_text_incognito": [
+        212,
+        202,
+        209
+      ],
+      "tab_background_text_incognito_inactive": [
+        190,
+        180,
+        188
+      ],
+      "bookmark_text": [
+        222,
+        213,
+        219
+      ],
+      "omnibox_background": [
+        6,
+        5,
+        8
+      ],
+      "omnibox_text": [
+        235,
+        228,
+        233
+      ]
+    },
+    "tints": {
+      "buttons": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame_inactive": [
+        -1,
+        -1,
+        0.4
+      ],
+      "frame_incognito": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame_incognito_inactive": [
+        -1,
+        -1,
+        0.4
+      ],
+      "background_tab": [
+        -1,
+        -1,
+        0.46
+      ]
+    }
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsPzmGpeTQuee8aWZPpbA4Do1VYKsTDyGcux4LV8mxrc+RDbalVVTd/9UOKY0N51sSj0TgzkIJPHEcq5UD7l7xXDO/EeBTl1IluhOlTRXOhYZjrISil9FMnEpYkgOwMC7pw1SEsMraUsUhK4EIFw1TD2VKoIAVQJ5C1mUB/90AojzB34ts9/KhcGgdUZH+0unJ8atafchOzRJwav5m2Ts+TXqyXpOCmEJwUoFtPTzi5pnqd7mv/q3vNPpzk6swdl3LFpZUSbDy6QnAWkIQq5Q/2CmarJwStlkgK4asAGCYgh0S6YtQo3f7sjaT+PHc8ghl5B5k8wB1I2Pvqaz9fidXQIDAQAB"
+}
