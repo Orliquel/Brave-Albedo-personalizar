@@ -1,0 +1,144 @@
+{
+  "larguras": [
+    {
+      "larguraJanela": 1280,
+      "tolerancia": 16,
+      "limitesDireitosPorQuantidade": {
+        "1": [
+          251
+        ],
+        "2": [
+          251,
+          497
+        ],
+        "3": [
+          251,
+          497,
+          743
+        ],
+        "4": [
+          251,
+          497,
+          743,
+          989
+        ],
+        "5": [
+          209,
+          412,
+          615,
+          818,
+          1021
+        ]
+      },
+      "limitesEsquerdosPorQuantidade": {
+        "1": [
+          3
+        ],
+        "2": [
+          3,
+          249
+        ],
+        "3": [
+          3,
+          249,
+          495
+        ],
+        "4": [
+          3,
+          249,
+          495,
+          741
+        ],
+        "5": [
+          3,
+          207,
+          410,
+          613,
+          816
+        ]
+      }
+    },
+    {
+      "larguraJanela": 1920,
+      "tolerancia": 16,
+      "fonteLimites": "Geometria de aba inferida pelo limite de largura 248 px observado nas calibrações de 1280 e 2560 px; confirmar visualmente em janela 1920 px.",
+      "limitesDireitosPorQuantidade": {
+        "1": [251],
+        "2": [251, 497],
+        "3": [251, 497, 743],
+        "4": [251, 497, 743, 989],
+        "5": [251, 497, 743, 989, 1235]
+      },
+      "limitesEsquerdosPorQuantidade": {
+        "1": [3],
+        "2": [3, 249],
+        "3": [3, 249, 495],
+        "4": [3, 249, 495, 741],
+        "5": [3, 249, 495, 741, 987]
+      }
+    },
+    {
+      "larguraJanela": 2560,
+      "tolerancia": 16,
+      "limitesDireitosPorQuantidade": {
+        "1": [
+          251
+        ],
+        "2": [
+          251,
+          497
+        ],
+        "3": [
+          251,
+          497,
+          743
+        ],
+        "4": [
+          251,
+          497,
+          743,
+          989
+        ],
+        "5": [
+          251,
+          497,
+          743,
+          989,
+          1235
+        ]
+      },
+      "limitesEsquerdosPorQuantidade": {
+        "1": [
+          3
+        ],
+        "2": [
+          3,
+          249
+        ],
+        "3": [
+          3,
+          249,
+          495
+        ],
+        "4": [
+          3,
+          249,
+          495,
+          741
+        ],
+        "5": [
+          3,
+          249,
+          495,
+          741,
+          987
+        ]
+      }
+    }
+  ],
+  "recuoRetrato": 30,
+  "larguraRetrato": 65,
+  "alturaRetrato": 32,
+  "deslocamentoVertical": 20,
+  "margemDireitaArte": 28
+}

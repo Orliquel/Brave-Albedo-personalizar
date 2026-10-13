@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "maxTabs": 5,
+  "sets": [
+    {
+      "width": 1280,
+      "tolerance": 16,
+      "themes": [
+        {
+          "count": 1,
+          "id": "bijlfhojcacakebkcigbkefcapgdegdc",
+          "name": "Albedo Adaptativo · 1 aba",
+          "directory": "temas/1"
+        },
+        {
+          "count": 2,
+          "id": "lkbfcpebocdiagcmafijjdphmfklkbfp",
+          "name": "Albedo Adaptativo · 2 abas",
+          "directory": "temas/2"
+        },
+        {
+          "count": 3,
+          "id": "pehkohaiddfbkkchdheheennlopdapnh",
+          "name": "Albedo Adaptativo · 3 abas",
+          "directory": "temas/3"
+        },
+        {
+          "count": 4,
+          "id": "bieogljogdgibhfebccjjmlpdfmfkeni",
+          "name": "Albedo Adaptativo · 4 abas",
+          "directory": "temas/4"
+        },
+        {
+          "count": 5,
+          "id": "mlkandjdnbphilelojebkmfdgpnmiaih",
+          "name": "Albedo Adaptativo · 5 abas",
+          "directory": "temas/5"
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "tolerance": 16,
+      "themes": [
+        {
+          "count": 1,
+          "id": "oichjabkohdendkjglfacjgpngloieok",
+          "name": "Albedo Adaptativo · 1920 px · 1 aba",
+          "directory": "temas/1920-1"
+        },
+        {
+          "count": 2,
+          "id": "kefaobjmnpkfjpiogjghihhcediadhcp",
+          "name": "Albedo Adaptativo · 1920 px · 2 abas",
+          "directory": "temas/1920-2"
+        },
+        {
+          "count": 3,
+          "id": "ddlbcmcgmgandpbkkhmfglokeelbehfc",
+          "name": "Albedo Adaptativo · 1920 px · 3 abas",
+          "directory": "temas/1920-3"
+        },
+        {
+          "count": 4,
+          "id": "bapaffinelhgdbapfaaehbmkhepdboag",
+          "name": "Albedo Adaptativo · 1920 px · 4 abas",
+          "directory": "temas/1920-4"
+        },
+        {
+          "count": 5,
+          "id": "dcofmniclifghkgkjcenblkhmjibnkjm",
+          "name": "Albedo Adaptativo · 1920 px · 5 abas",
+          "directory": "temas/1920-5"
+        }
+      ]
+    },
+    {
+      "width": 2560,
+      "tolerance": 16,
+      "themes": [
+        {
+          "count": 1,
+          "id": "ppdngkhebbmigpldkphodogljfdfmfnp",
+          "name": "Albedo Adaptativo · 2560 px · 1 aba",
+          "directory": "temas/2560-1"
+        },
+        {
+          "count": 2,
+          "id": "adidabgeablahkemkclekaiealmhmhko",
+          "name": "Albedo Adaptativo · 2560 px · 2 abas",
+          "directory": "temas/2560-2"
+        },
+        {
+          "count": 3,
+          "id": "ikkiflklcngnndjelclghcohalakdfhh",
+          "name": "Albedo Adaptativo · 2560 px · 3 abas",
+          "directory": "temas/2560-3"
+        },
+        {
+          "count": 4,
+          "id": "klghbbeoebfdngmfcingbpicgmkbgjkb",
+          "name": "Albedo Adaptativo · 2560 px · 4 abas",
+          "directory": "temas/2560-4"
+        },
+        {
+          "count": 5,
+          "id": "fbigjmgdepcbgjogobfkjnkeajleocfc",
+          "name": "Albedo Adaptativo · 2560 px · 5 abas",
+          "directory": "temas/2560-5"
+        }
+      ]
+    }
+  ],
+  "base": {
+    "count": 0,
+    "id": "nmponmjklkdclhcgdcchdooncedghfnk",
+    "name": "Albedo Adaptativo · Base sem retrato",
+    "directory": "temas/base"
+  }
+}

@@ -1,5 +1,15 @@
 # Histórico
 
+## 3.3 — suporte a Full HD e instalação enxuta
+
+- Medição isolada de RAM e CPU contra a versão 3.2; custo praticamente neutro na carga testada.
+
+- Cinco variantes para janelas de 1920 px.
+- O controlador exige as cinco variantes da largura atual e o tema base; os conjuntos das outras calibrações são opcionais.
+- O painel diferencia variantes instaladas, necessárias e opcionais.
+- A geometria de 1920 px reaproveita o passo máximo de aba observado nas calibrações anteriores e precisa de confirmação visual no Brave.
+- Medição isolada de RAM e CPU contra a versão 3.2; custo praticamente neutro na carga testada.
+
 ## 3.2 — atualização do controlador
 
 - Debounce de 650 ms para agrupar eventos de abas e janelas.

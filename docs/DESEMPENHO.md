@@ -36,3 +36,18 @@ A RAM foi lida por `PROCESS_MEMORY_COUNTERS_EX2.PrivateWorkingSetSize`. Os PIDs 
 - Não inclui memória de vídeo dedicada, outras extensões ou páginas reais.
 - A coleta por CDP/Playwright pode alterar levemente o tempo de execução.
 - O teste interativo permite verificar aparência no Brave, mas a comparação visual final fica a cargo do usuário.
+
+## Medição 3.2 versus 3.3
+
+Medição repetida em 13 de outubro de 2026, após encerrar as instâncias normais do Brave. Foram usados perfis isolados, cinco abas `about:blank`, 35 s de aquecimento, 15 s em repouso e 20 mudanças de quantidade de abas entre uma e cinco durante 20 s. A coleta foi feita uma vez por versão, com 12 processadores lógicos. RAM privada média/pico usa `PrivateWorkingSetSize`; CPU é normalizada pela capacidade total dos processadores lógicos.
+
+| Versão | Cenário | RAM privada média | Pico de RAM privada | CPU média | Pico de CPU |
+|---|---|---:|---:|---:|---:|
+| 3.2 | Repouso (29 amostras) | 203,56 MiB | 203,70 MiB | 0,02% | 0,51% |
+| 3.3 | Repouso (29 amostras) | 205,68 MiB | 206,54 MiB | 0,03% | 0,77% |
+| 3.2 | Trocas (41 amostras) | 439,02 MiB | 704,68 MiB | 4,80% | 10,48% |
+| 3.3 | Trocas (41 amostras) | 440,42 MiB | 712,86 MiB | 4,93% | 11,18% |
+
+Nesta execução, a 3.3 ficou 1,40 MiB acima na RAM privada média e 0,13 ponto percentual acima na CPU média durante as trocas. A diferença é pequena e não indica ganho de desempenho; o custo medido ficou praticamente neutro. A 3.3 carregou apenas o controlador, cinco temas de 1280 px e o tema base; a 3.2 carregou o controlador e seus 11 temas.
+
+Esta é uma única passagem por versão, em carga sintética e com páginas vazias. A RAM é do Brave inteiro, não apenas do controlador. Os valores podem variar entre máquinas e execuções e não representam uso com páginas reais.
