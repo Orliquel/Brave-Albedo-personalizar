@@ -1,0 +1,11 @@
+Cached Theme.pak
+**/Cached Theme.pak
+*.log
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.zip
+*.pem
+*.pfx
+.env
+.env.*
