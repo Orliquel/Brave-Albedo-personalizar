@@ -4,9 +4,9 @@
 
 **Preto, vermelho escuro e Albedo na barra superior do Brave.**
 
-Versão pública **3.1** · Temas nativos do Chromium · **1 a 5 abas**
+Versão pública **3.2** · Temas nativos do Chromium · **1 a 5 abas**
 
-![Referência visual da barra superior](albedo-adaptativo-10-v3.1/recursos/referencia.png)
+![Referência visual da barra superior](albedo-adaptativo-10-v3.2/recursos/referencia.png)
 
 *Referência visual usada na criação do projeto.*
 
@@ -28,11 +28,11 @@ As abas e a barra de endereço continuam sendo elementos nativos do Brave. O pac
 
 ## Baixar e instalar
 
-**[Baixar o pacote 3.1](https://github.com/Orliquel/Brave-Albedo-personalizar/releases/download/v3.1/Brave-Albedo-personalizar-v3.1.zip)** · [Ver as releases](https://github.com/Orliquel/Brave-Albedo-personalizar/releases)
+**[Baixar o pacote 3.2](https://github.com/Orliquel/Brave-Albedo-personalizar/releases/latest/download/Brave-Albedo-personalizar-v3.2.zip)** · [Ver as releases](https://github.com/Orliquel/Brave-Albedo-personalizar/releases)
 
 1. Extraia o ZIP para uma pasta permanente. Não mova essa pasta depois da instalação.
 2. Abra `brave://extensions` e ative **Modo do desenvolvedor**.
-3. Clique em **Carregar sem compactação** e selecione `albedo-adaptativo-10-v3.1/controlador`.
+3. Clique em **Carregar sem compactação** e selecione `albedo-adaptativo-10-v3.2/controlador`.
 4. Aguarde alguns segundos. Carregue **uma pasta por vez**, dando tempo ao controlador para reconhecer cada tema:
 
    | Calibração | Pastas para carregar individualmente |
@@ -43,9 +43,17 @@ As abas e a barra de endereço continuam sendo elementos nativos do Brave. O pac
 
 5. Abra o **Albedo Adaptativo** no menu de extensões. Confirme que os onze temas estão instalados e que a troca automática está ligada.
 
-Os caminhos da tabela estão dentro de `albedo-adaptativo-10-v3.1`. Selecione as pastas que contêm um `manifest.json`; a pasta principal e `recursos` não são extensões.
+Os caminhos da tabela estão dentro de `albedo-adaptativo-10-v3.2`. Selecione as pastas que contêm um `manifest.json`; a pasta principal e `recursos` não são extensões.
 
 **Instale o controlador antes dos temas.** Ele mantém as variantes desativadas até precisar delas. Carregar todos os temas simultaneamente pode fazer o navegador descartar variantes anteriores.
+
+### Atualizar da versão 3.1
+
+Em `brave://extensions`, remova o controlador e os onze temas da versão anterior. Extraia o pacote 3.2 em uma pasta permanente, carregue o novo controlador e, em seguida, as onze pastas de temas, uma por vez. Os identificadores foram preservados, então o controlador continuará reconhecendo as variantes.
+
+## Ajustes de desempenho da versão 3.2
+
+O controlador agora espera 650 ms para agrupar eventos próximos, ignora a seleção de outra aba quando a quantidade não mudou e não regrava um status idêntico. Isso reduz verificações e atualizações redundantes. A troca do tema continua sendo feita pelo próprio Brave; a medição publicada foi realizada na versão 3.1 e ainda não quantifica o efeito desses ajustes na RAM ou na CPU.
 
 ## Como a adaptação funciona
 
@@ -80,7 +88,7 @@ O cenário fez vinte alterações de quantidade de abas e largura em aproximadam
 ## Arquivos do projeto
 
 ```text
-albedo-adaptativo-10-v3.1/
+albedo-adaptativo-10-v3.2/
 ├── controlador/       Seleção automática dos temas
 ├── temas/             Dez variantes e o tema base
 ├── recursos/          Arte e referência para geração

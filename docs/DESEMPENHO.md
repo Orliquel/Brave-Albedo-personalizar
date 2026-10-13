@@ -1,5 +1,7 @@
 # Medição de RAM e CPU
 
+Os números abaixo pertencem à versão **3.1**. A versão 3.2 agrupa eventos por 650 ms, remove verificações em simples mudanças de aba selecionada e evita regravar status idêntico. O efeito desses ajustes ainda não foi medido; não use os números da 3.1 como se fossem um benchmark da 3.2.
+
 Medição realizada em **13 de outubro de 2026**, no Windows, usando Brave baseado em Chromium **155.0.8059.40** e uma máquina com **12 processadores lógicos**.
 
 Foram usados perfis isolados, com os mesmos argumentos de inicialização, de uma a cinco abas `about:blank`, larguras de 1280 e 2560 px e instrumentação por Playwright/CDP. O perfil com o pacote teve o controlador e os onze temas carregados sequencialmente. A API confirmou cinco abas, a variante de 2560 px ativa e todas as variantes instaladas.
@@ -39,4 +41,4 @@ Na última amostra, aproximadamente **612 MiB** estavam no processo principal do
 - A instrumentação pode alterar o estado de execução do service worker.
 - O resultado visual foi aprovado pelo usuário; não foi feita uma comparação de capturas para afirmar identidade com a referência.
 
-A versão 3.1 deve ser tratada como experimental quanto ao custo da troca automática.
+A troca automática continua experimental quanto ao custo de memória. A versão 3.2 reduz trabalho redundante do controlador, mas não há uma nova medição que demonstre redução da retenção observada no processo principal do Brave.

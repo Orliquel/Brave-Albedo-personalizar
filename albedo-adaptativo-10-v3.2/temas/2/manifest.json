@@ -1,0 +1,132 @@
+{
+  "manifest_version": 3,
+  "name": "Albedo Adaptativo · 2 abas",
+  "version": "0.4.1",
+  "description": "Tema nativo para o controlador Albedo Adaptativo. Sem personalização da Nova Guia.",
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme-frame.png",
+      "theme_toolbar": "images/theme-toolbar.png"
+    },
+    "colors": {
+      "frame": [
+        10,
+        9,
+        12
+      ],
+      "frame_inactive": [
+        13,
+        10,
+        14
+      ],
+      "frame_incognito": [
+        10,
+        9,
+        12
+      ],
+      "frame_incognito_inactive": [
+        13,
+        10,
+        14
+      ],
+      "background_tab": [
+        16,
+        10,
+        14
+      ],
+      "background_tab_inactive": [
+        17,
+        13,
+        17
+      ],
+      "toolbar": [
+        11,
+        8,
+        12
+      ],
+      "toolbar_text": [
+        237,
+        231,
+        235
+      ],
+      "toolbar_button_icon": [
+        220,
+        211,
+        218
+      ],
+      "tab_text": [
+        248,
+        241,
+        245
+      ],
+      "tab_background_text": [
+        212,
+        202,
+        209
+      ],
+      "tab_background_text_inactive": [
+        190,
+        180,
+        188
+      ],
+      "tab_background_text_incognito": [
+        212,
+        202,
+        209
+      ],
+      "tab_background_text_incognito_inactive": [
+        190,
+        180,
+        188
+      ],
+      "bookmark_text": [
+        222,
+        213,
+        219
+      ],
+      "omnibox_background": [
+        6,
+        5,
+        8
+      ],
+      "omnibox_text": [
+        235,
+        228,
+        233
+      ]
+    },
+    "tints": {
+      "buttons": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame_inactive": [
+        -1,
+        -1,
+        0.4
+      ],
+      "frame_incognito": [
+        -1,
+        -1,
+        -1
+      ],
+      "frame_incognito_inactive": [
+        -1,
+        -1,
+        0.4
+      ],
+      "background_tab": [
+        -1,
+        -1,
+        0.46
+      ]
+    }
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu/EvExSxO7bi7j5jSne4BRci7LR77eCJZSb51SQ/SCf+1ZB6iWSu9fE3R5pGZeHBOr1R68WOnxAiF31bGnqbQfDr/EalGf2mvVy9n/KurPg54WLR0WKR5k7rcnc83YXg6DtXlpR7noKSzEBo/vpCmhBVcE6sf/6qdGXwOMjZA+bmRdxEuL97a7cY9JxOXP62y5kxfQ0mXE878B+QewYLeTxJECGH6P7LOrtYKoHXaNDaow3vzGKXN/QYESLsriE8frnOADjVQm5kHC//HlBHsAp6m3phlkoZGlCfrpaCC6cIXdT3eM4H4c1/hOn/XUSbuS1GoeHSAIKCiGogLac9MQIDAQAB"
+}
